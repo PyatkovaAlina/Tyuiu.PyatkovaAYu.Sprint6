@@ -36,8 +36,8 @@ namespace Tyuiu.PyatkovaAYu.Sprint6.Task1.V24
             this.buttonDone = new System.Windows.Forms.Button();
             this.buttonHelp = new System.Windows.Forms.Button();
             this.groupBoxData = new System.Windows.Forms.GroupBox();
-            this.textBoxStartStep = new System.Windows.Forms.TextBox();
             this.textBoxStopStep = new System.Windows.Forms.TextBox();
+            this.textBoxStartStep = new System.Windows.Forms.TextBox();
             this.groupBoxResult.SuspendLayout();
             this.groupBoxData.SuspendLayout();
             this.SuspendLayout();
@@ -73,6 +73,7 @@ namespace Tyuiu.PyatkovaAYu.Sprint6.Task1.V24
             this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxResult.Size = new System.Drawing.Size(224, 289);
             this.textBoxResult.TabIndex = 3;
+            this.textBoxResult.TextChanged += new System.EventHandler(this.textBoxResult_TextChanged);
             // 
             // buttonDone
             // 
@@ -83,6 +84,7 @@ namespace Tyuiu.PyatkovaAYu.Sprint6.Task1.V24
             this.buttonDone.TabIndex = 2;
             this.buttonDone.Text = "Выполнить";
             this.buttonDone.UseVisualStyleBackColor = false;
+            this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
             // 
             // buttonHelp
             // 
@@ -93,7 +95,7 @@ namespace Tyuiu.PyatkovaAYu.Sprint6.Task1.V24
             this.buttonHelp.TabIndex = 3;
             this.buttonHelp.Text = "Справка";
             this.buttonHelp.UseVisualStyleBackColor = false;
-            this.buttonHelp.Click += new System.EventHandler(this.button2_Click);
+            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
             // 
             // groupBoxData
             // 
@@ -107,19 +109,22 @@ namespace Tyuiu.PyatkovaAYu.Sprint6.Task1.V24
             this.groupBoxData.Text = "Ввод данных                                                                      " +
     "      Старт шага:                                      Конец шага:";
             // 
-            // textBoxStartStep
-            // 
-            this.textBoxStartStep.Location = new System.Drawing.Point(6, 32);
-            this.textBoxStartStep.Name = "textBoxStartStep";
-            this.textBoxStartStep.Size = new System.Drawing.Size(100, 20);
-            this.textBoxStartStep.TabIndex = 0;
-            // 
             // textBoxStopStep
             // 
             this.textBoxStopStep.Location = new System.Drawing.Point(183, 32);
             this.textBoxStopStep.Name = "textBoxStopStep";
             this.textBoxStopStep.Size = new System.Drawing.Size(100, 20);
             this.textBoxStopStep.TabIndex = 1;
+            this.textBoxStopStep.TextChanged += new System.EventHandler(this.textBoxStopStep_TextChanged);
+            this.textBoxStopStep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxStopStep_KeyPress);
+            // 
+            // textBoxStartStep
+            // 
+            this.textBoxStartStep.Location = new System.Drawing.Point(6, 32);
+            this.textBoxStartStep.Name = "textBoxStartStep";
+            this.textBoxStartStep.Size = new System.Drawing.Size(100, 20);
+            this.textBoxStartStep.TabIndex = 0;
+            this.textBoxStartStep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxStartStep_KeyPress);
             // 
             // FormMain
             // 
@@ -131,8 +136,10 @@ namespace Tyuiu.PyatkovaAYu.Sprint6.Task1.V24
             this.Controls.Add(this.buttonDone);
             this.Controls.Add(this.groupBoxResult);
             this.Controls.Add(this.groupBoxTask);
+            this.MaximizeBox = false;
             this.Name = "FormMain";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Спринт 6 | Таск 1 | Вариант 24 | Пяткова А.Ю.";
             this.groupBoxResult.ResumeLayout(false);
             this.groupBoxResult.PerformLayout();
             this.groupBoxData.ResumeLayout(false);

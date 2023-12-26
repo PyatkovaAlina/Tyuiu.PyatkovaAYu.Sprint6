@@ -15,17 +15,13 @@ namespace Tyuiu.PyatkovaAYu.Sprint6.Task3.V16.Lib
             int rows = matrix.GetUpperBound(0) + 1;
             int columns = matrix.Length / rows;
 
-            
-            for (int i = 0; i < rows; i++)
-            {
-                for (int j = 0; j < columns; j++)
+            for (int j = 0; j < columns; j++)
+            {                   
+                if (matrix[2, j] % 2 == 0)
                 {
-                    if (matrix[2, j] % 2 == 0)
-                    {
-                        matrix[i, j] = matrix[i, 0];
-                    }
+                    matrix[2, j] = 0;
                 }
-            }
+            }            
             return matrix;
         }
     }

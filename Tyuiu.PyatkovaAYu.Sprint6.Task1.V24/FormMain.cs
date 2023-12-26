@@ -20,7 +20,6 @@ namespace Tyuiu.PyatkovaAYu.Sprint6.Task1.V24
         }
         
         DataService ds = new DataService();
-
         private void buttonDone_Click(object sender, EventArgs e)
         {
             try
@@ -72,7 +71,22 @@ namespace Tyuiu.PyatkovaAYu.Sprint6.Task1.V24
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void textBoxStopStep_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void textBoxStopStep_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxStartStep_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void textBoxResult_TextChanged(object sender, EventArgs e)
         {
 
         }
